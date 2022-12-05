@@ -580,10 +580,12 @@ img {
 /* Підвал */
 .footer {
     background-color: var(--accent-background);
+    padding-top: 60px;
 }
 
 .footer-elements {
     display: flex;
+    align-items: baseline;
 }
 
 .footer-element-contacts {
@@ -591,7 +593,6 @@ img {
 }
 
 .footer .logo {
-    margin-top: 60px;
     margin-bottom: 20px;
 }
 
@@ -637,7 +638,6 @@ img {
 }
 
 .footer-subtitle {
-    margin-top: 72px;
     margin-bottom: 20px;
     font-size: 14px;
     line-height: 16px;
@@ -664,16 +664,17 @@ img {
 }
 
 .footer-modal-input {
-    margin-right: 12px;
     padding: 15px 16px;
     width: 358px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: transparent;
+    outline: none;
 }
 
-.footer-modal-input.placeholder {
+.footer-modal-input.placeholder,
+.footer-modal-input.placeholder::placeholder {
     font-size: 16px;
     line-height: 1.25;
     color: rgba(255, 255, 255, 0.6);
@@ -684,6 +685,7 @@ img {
     align-items: center;
     justify-content: center;
     min-width: 200px;
+    margin-left: 12px;
 
     font-family: inherit;
     font-weight: 700;
@@ -705,9 +707,9 @@ img {
         background-color: var(--secondary-accent-color);
     }
 
-.mailing-submit-icon {
-    margin-left: 10px;
-}
+    .mailing-submit-icon {
+        margin-left: 10px;
+    }
 
 
 /* Модалка */
@@ -748,12 +750,14 @@ img {
 
 .modal-close-button {
     position: absolute;
-    top: 17px;
-    right: 17px;
+    top: 8px;
+    right: 8px;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 3px;
+    padding-right: 4px;
     
     width: 30px;
     height: 30px;
@@ -783,9 +787,14 @@ img {
 .modal-label {
     position: relative;
     display: block;
+    margin-bottom: 10px;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
+}
+
+.modal-label.comment {
+    margin-bottom: 20px;
 }
 
 .policy {
@@ -797,10 +806,10 @@ img {
 .modal-input {
     display: block;
     margin-top: 4px;
-    margin-bottom: 10px;
     padding: 11px 42px;
     width: 100%;
 
+    outline: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: border-color var(--duration) var(--timing-function);
@@ -815,17 +824,17 @@ img {
 }
 
 .placeholder.modal-input {
-    margin-bottom: 20px;
     padding: 11px 12px;
     resize: none;
 }
 
-input::placeholder {
+.placeholder.modal-input::placeholder {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
 }
+
 
 .modal-icon {
     position: absolute;
@@ -860,6 +869,7 @@ input::placeholder {
 }
 
 .modal-link-accent {
+    margin-left: 4px;
     color: var(--acent-color)
 }
 
