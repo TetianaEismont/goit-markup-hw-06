@@ -586,6 +586,7 @@ img {
 .footer-elements {
     display: flex;
     align-items: baseline;
+    justify-content: space-between;
 }
 
 .footer-element-contacts {
@@ -596,7 +597,7 @@ img {
     margin-bottom: 20px;
 }
 
-.footer.logo {
+.footer-logo {
     display: inline-block;
     color: var(--secondary-tect-color);
 }
